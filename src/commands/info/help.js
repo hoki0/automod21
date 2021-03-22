@@ -27,7 +27,7 @@ module.exports = class HelpCommand extends Command {
     const all = (args[0] === 'all') ? args[0] : '';
     const embed = new MessageEmbed();
     const prefix = message.client.db.settings.selectPrefix.pluck().get(message.guild.id); // Get prefix
-    const { INFO, FUN, COLOR, POINTS, MISC, GAMES, MOD, ADMIN, MUSIC, BACKUP, OWNER, NSFW } = message.client.types;
+    const { INFO, ANTI, FUN, COLOR, POINTS, MISC, GAMES, MOD, ADMIN, MUSIC, BACKUP, OWNER, NSFW } = message.client.types;
     const { capitalize } = message.client.utils;
     
     const command = message.client.commands.get(args[0]) || message.client.aliases.get(args[0]);
@@ -39,7 +39,7 @@ module.exports = class HelpCommand extends Command {
       
       embed // Build specific command help embed
         .setTitle(`Command: \`${command.name}\``)
-        .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+        .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
         .setDescription(command.description)
         .addField('Usage', `\`${prefix}${command.usage}\``, true)
         .addField('Type', `\`${capitalize(command.type)}\``, true)
@@ -62,17 +62,17 @@ module.exports = class HelpCommand extends Command {
 
       const emojiMap = {
         [INFO]: `${emojis.info} ${capitalize(INFO)}`,
+        [ANTI]: `${emojis.anti} ${capitalize(ANTI)}`,
         [FUN]: `${emojis.fun} ${capitalize(FUN)}`,
         [COLOR]: `${emojis.color} ${capitalize(COLOR)}`,
         [POINTS]: `${emojis.points} ${capitalize(POINTS)}`,
         [MISC]: `${emojis.misc} ${capitalize(MISC)}`,
-        [GAMES]: `${emojis.games} ${capitalize(GAMES)}`,
         [MOD]: `${emojis.mod} ${capitalize(MOD)}`,
         [ADMIN]: `${emojis.admin} ${capitalize(ADMIN)}`,
         [MUSIC]: `${emojis.music} ${capitalize(MUSIC)}`,
         [BACKUP]: `${emojis.backup} ${capitalize(BACKUP)}`,
-        [OWNER]: `${emojis.owner} ${capitalize(OWNER)}`,
-        [NSFW]: `${emojis.nsfw} ${capitalize(NSFW)}`
+        [OWNER]: `${emojis.owner} ${capitalize(OWNER)}`
+        
       };
 
       message.client.commands.forEach(command => {
@@ -89,7 +89,7 @@ module.exports = class HelpCommand extends Command {
       const size = message.client.commands.size - commands[OWNER].length;
 
       embed // Build help embed
-        .setTitle('Any Bot\'s Commands')
+        .setTitle('Fluxed \'s Commands')
         .setDescription(stripIndent`
           **Prefix:** \`${prefix}\`
           **More Information:** \`${prefix}help [command]\`
@@ -101,7 +101,7 @@ module.exports = class HelpCommand extends Command {
           message.author.displayAvatarURL({ dynamic: true })
         )
         .setTimestamp()
-        .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+        .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
         .setColor(message.guild.me.displayHexColor);
 
       for (const type of Object.values(message.client.types)) {
@@ -112,8 +112,8 @@ module.exports = class HelpCommand extends Command {
 
       embed.addField(
         '**Links**', 
-        '**[Invite Me](https://discordapp.com/oauth2/authorize?client_id=733728002910715977&scope=bot&permissions=8) | ' +
-        '[Support Server](https://discord.gg/2FRpkNr) **'
+        '**[Invite Me](https://discord.com/api/oauth2/authorize?client_id=712313863256670218&permissions=8&scope=bot) | ' +
+        '[Support Server](https://discord.gg/vcTwsbREQB) **'
       );
         
     }
