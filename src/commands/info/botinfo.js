@@ -10,7 +10,7 @@ module.exports = class BotInfoCommand extends Command {
       name: 'botinfo',
       aliases: ['bot', 'bi'],
       usage: 'botinfo',
-      description: 'Fetches Any Bot\'s bot information.',
+      description: 'Fetches Fluxed Bot\'s bot information.',
       type: client.types.INFO
     });
   }
@@ -26,11 +26,7 @@ module.exports = class BotInfoCommand extends Command {
     const embed = new MessageEmbed()
       .setTitle('Any Bot\'s Bot Information')
       .setDescription(oneLine`
-        Any Bot is a Discord bot that comes from a variation of another open source and fully customizable bot that is constantly growing.
-        She comes packaged with a variety of commands and 
-        a multitude of settings that can be tailored to your server's specific needs. 
-        Her codebase also serves as a base framework to easily create Discord bots of all kinds.
-        She first went live on **April 05nd, 2020**.
+        Fluxed Bot is a Discord bot that comes from a variation of different open source and fully customizable bots.He comes packaged with a variety of commands and  a multitude of settings that can be tailored to your server's specific needs.His codebase also serves as a base framework to easily create Discord bots of all kinds. She first went live on March 16, 2021. Fluxed has tons of command from Antinuke to Music that you can use anything in any server and More Commands are being added .The Prefix is > but you can customize is to you're servers liking.**.
       `)
       .addField('Prefix', `\`${prefix}\``, true)
       .addField('Client ID', `\`${message.client.user.id}\``, true)
@@ -39,7 +35,7 @@ module.exports = class BotInfoCommand extends Command {
       .addField(
         'Links', 
         '**[Invite Me](https://discordapp.com/oauth2/authorize?client_id=733728002910715977&scope=bot&permissions=8) | ' +
-        '[Support Server](https://discord.gg/2FRpkNr) **'
+        '[Support Server](https://discord.gg/vcTwsbREQBr) **'
       )
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
       .setTimestamp()
