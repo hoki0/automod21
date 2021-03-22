@@ -2,7 +2,7 @@ const Command = require('../Command.js');
 const ReactionMenu = require('../ReactionMenu.js');
 const { MessageEmbed } = require('discord.js');
 const art = [
-  'https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531'
+  'https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif'
 ];
 
 module.exports = class GalleryCommand extends Command {
@@ -11,7 +11,7 @@ module.exports = class GalleryCommand extends Command {
       name: 'gallery',
       aliases: ['art'],
       usage: 'gallery',
-      description: 'Displays a gallery of Any Bot\'s art.',
+      description: 'Displays a gallery of Fluxed Bot\'s art.',
       type: client.types.INFO,
       clientPermissions: ['SEND_MESSAGES', 'EMBED_LINKS', 'ADD_REACTIONS']
     });
