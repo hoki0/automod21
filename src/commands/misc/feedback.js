@@ -8,9 +8,9 @@ module.exports = class FeedbackCommand extends Command {
       name: 'feedback',
       aliases: ['fb'],
       usage: 'feedback <message>',
-      description: 'Sends a message to the Any Bot Support Server\'s feedback channel.',
+      description: 'Sends a message to the Fluxed Bot Support Server\'s feedback channel.',
       type: client.types.MISC,
-      examples: ['feedback We love Any Bot!']
+      examples: ['feedback We love Fluxed Bot!']
     });
   }
   run(message, args) {
@@ -36,10 +36,10 @@ module.exports = class FeedbackCommand extends Command {
     if (feedback.length > 1024) feedback = feedback.slice(0, 1021) + '...';
     const embed = new MessageEmbed()
       .setTitle('Feedback')
-      .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+      .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
       .setDescription(oneLine`
         Successfully sent feedback!
-        Please join the [Any Bot Support Server](https://discord.gg/2FRpkNr) to further discuss your feedback.
+        Please join the [Fluxed Bot Support Server](https://discord.gg/vcTwsbREQB) to further discuss your feedback.
       `) 
       .addField('Member', message.member, true)
       .addField('Message', feedback)
