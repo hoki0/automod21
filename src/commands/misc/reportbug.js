@@ -9,7 +9,7 @@ module.exports = class ReportBugCommand extends Command {
       aliases: ['bugreport', 'report', 'bug', 'rb', 'br'],
       usage: 'reportbug <message>',
       description: oneLine`
-        Sends a message to the Any Bot Support Server's bug report channel.
+        Sends a message to the Fluxed Bot Support Server's bug report channel.
         When reporting a bug, please include as much information as possible.
       `,
       type: client.types.MISC,
@@ -39,10 +39,10 @@ module.exports = class ReportBugCommand extends Command {
     if (report.length > 1024) report = report.slice(0, 1021) + '...';
     const embed = new MessageEmbed()
       .setTitle('Bug Report')
-      .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+      .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
       .setDescription(oneLine`
         Successfully sent bug report!
-        Please join the [Any Bot Support Server](https://discord.gg/2FRpkNr) to further discuss your issue.
+        Please join the [Any Bot Support Server](https://discord.gg/vcTwsbREQB) to further discuss your issue.
       `) 
       .addField('Member', message.member, true)
       .addField('Message', report)
