@@ -8,20 +8,20 @@ module.exports = class InviteMeCommand extends Command {
       name: 'inviteme',
       aliases: ['invite', 'invme', 'im'],
       usage: 'inviteme',
-      description: 'Generates a link you can use to invite Any Bot to your own server.',
+      description: 'Generates a link you can use to invite Fluxed Bot to your own server.',
       type: client.types.INFO
     });
   }
   run(message) {
     const embed = new MessageEmbed()
       .setTitle('Invite Me')
-      .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+      .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
       .setDescription(oneLine`
-        Click [here](https://discordapp.com/oauth2/authorize?client_id=733728002910715977&scope=bot&permissions=8)
+        Click [here](https://discord.com/api/oauth2/authorize?client_id=712313863256670218&permissions=8&scope=bot)
         to invite me to your server!
       `)
       .addField('Other Links', 
-        '**[Support Server](https://discord.gg/2FRpkNr) **'
+        '**[Support Server](https://discord.gg/vcTwsbREQB) **'
       )
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
       .setTimestamp()
