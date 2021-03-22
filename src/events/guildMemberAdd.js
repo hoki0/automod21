@@ -4,6 +4,15 @@ const { stripIndent } = require('common-tags');
 
 module.exports = async (client, member) => {
 
+const exampleEmbed = new MessageEmbed()
+.setTitle("Fluxed Bot")
+.setThumbnail('https://images-ext-1.discordapp.net/external/fp4KDG7tDzqRZ5tLBXRZMJCw1Luc2Z7lb_Ug9LMbPPk/https/media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
+.setDescription('**Fluxed bot is a discord bot with many of features, such as: \n \n Antinuke | Welcome \n Moderation | Fun \n Info | multipurpose logs \n Color | Verification \n Fluxed has over 120+ command with different alliess you can use. Its easy to setup and use. \n \n**Click [here](https://discord.gg/vcTwsbREQB) to join the Fluxed Bot Support Server**')
+.addField('Fluxed Bot Invite Link','**[Invite Me](https://discordapp.com/oauth2/authorize?client_id=733728002910715977&scope=bot&permissions=8)**' )
+member.send(exampleEmbed);
+
+console.log(`Sent DM to ${member.user.username}`);
+
   client.logger.info(`${member.guild.name}: ${member.user.tag} has joined the server`);
 
   /** ------------------------------------------------------------------------------------------------
@@ -44,7 +53,8 @@ module.exports = async (client, member) => {
     }
   }
 
-  /** ------------------------------------------------------------------------------------------------
+
+ /** ------------------------------------------------------------------------------------------------
    * WELCOME MESSAGES
    * ------------------------------------------------------------------------------------------------ */ 
   // Get welcome channel
