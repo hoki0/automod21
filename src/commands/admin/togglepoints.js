@@ -8,7 +8,7 @@ module.exports = class TogglePointsCommand extends Command {
       name: 'togglepoints',
       aliases: ['togglep', 'togp'],
       usage: 'togglepoints',
-      description: 'Enables or disables Any Bot\'s point tracking.',
+      description: 'Enables or disables Fluxed Bot\'s point tracking.',
       type: client.types.ADMIN,
       userPermissions: ['MANAGE_GUILD']
     });
