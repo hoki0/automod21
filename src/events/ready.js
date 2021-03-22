@@ -2,7 +2,7 @@ module.exports = async (client) => {
   
   const activities = [
     { name: '>help', type: 'LISTENING' }, 
-    { name: 'MDC#9285', type: 'LISTENING' }
+    { name: 'always lookup', type: 'LISTENING' }
   ];
 
   // Update presence
