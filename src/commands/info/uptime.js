@@ -8,7 +8,7 @@ module.exports = class UptimeCommand extends Command {
       name: 'uptime',
       aliases: ['up'],
       usage: 'uptime',
-      description: 'Fetches Any Bot\'s current uptime.',
+      description: 'Fetches Fluxed Bot\'s current uptime.',
       type: client.types.INFO
     });
   }
@@ -20,8 +20,8 @@ module.exports = class UptimeCommand extends Command {
     const seconds = (d.seconds() == 1) ? `${d.seconds()} second` : `${d.seconds()} seconds`;
     const date = moment().subtract(d, 'ms').format('dddd, MMMM Do YYYY');
     const embed = new MessageEmbed()
-      .setTitle('Any Bot\'s Uptime')
-      .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+      .setTitle('Fluxed Bot\'s Uptime')
+      .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
       .setDescription(`\`\`\`prolog\n${days}, ${hours}, ${minutes}, and ${seconds}\`\`\``)
       .addField('Date Launched', date) 
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
