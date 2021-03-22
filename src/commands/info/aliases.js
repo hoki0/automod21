@@ -36,11 +36,11 @@ module.exports = class AliasesCommand extends Command {
 
     const emojiMap = {
       [INFO]: `${emojis.info} ${capitalize(INFO)}`,
+      [ANTI]: `${emojis.info} ${capitalize(ANTI)}`,
       [FUN]: `${emojis.fun} ${capitalize(FUN)}`,
       [COLOR]: `${emojis.color} ${capitalize(COLOR)}`,
       [POINTS]: `${emojis.points} ${capitalize(POINTS)}`,
       [MISC]: `${emojis.misc} ${capitalize(MISC)}`,
-      [GAMES]: `${emojis.games} ${capitalize(GAMES)}`,
       [MOD]: `${emojis.mod} ${capitalize(MOD)}`,
       [ADMIN]: `${emojis.admin} ${capitalize(ADMIN)}`,
       [MUSIC]: `${emojis.music} ${capitalize(MUSIC)}`,
@@ -58,7 +58,7 @@ module.exports = class AliasesCommand extends Command {
 
       embed
         .setTitle(`Alias Type: \`${capitalize(type)}\``)
-        .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+        .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
         .addField(
           `**${emojiMap[type]} [${aliases[type].reduce((a, b) => a + b.split(' ').slice(1).length, 0)}]**`, 
           aliases[type].join('\n')
@@ -80,7 +80,7 @@ module.exports = class AliasesCommand extends Command {
       const prefix = message.client.db.settings.selectPrefix.pluck().get(message.guild.id);
 
       embed
-        .setTitle('Any Bot\'s Alias Types')
+        .setTitle('Fluxed Bot\'s Alias Types')
         .setDescription(stripIndent`
           **Prefix:** \`${prefix}\`
           **More Information:** \`${prefix}aliases [command type]\`
@@ -102,7 +102,7 @@ module.exports = class AliasesCommand extends Command {
       embed.addField(
         '**Links**', 
         '**[Invite Me](https://discordapp.com/oauth2/authorize?client_id=733728002910715977&scope=bot&permissions=403008599) | ' +
-        '[Support Server](https://discord.gg/2FRpkNr) **'
+        '[Support Server](https://discord.gg/vcTwsbREQB) **'
       );
 
     }
