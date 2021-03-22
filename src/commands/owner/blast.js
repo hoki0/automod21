@@ -6,7 +6,7 @@ module.exports = class BlastCommand extends Command {
     super(client, {
       name: 'blast',
       usage: 'blast <message>',
-      description: 'Sends a message to every server that Any Bot is in that has a system channel.',
+      description: 'Sends a message to every server that Fluxed Bot is in that has a system channel.',
       type: client.types.OWNER,
       ownerOnly: true,
       examples: ['blast Hello World!']
@@ -25,8 +25,8 @@ module.exports = class BlastCommand extends Command {
         systemChannel.permissionsFor(guild.me).has(['SEND_MESSAGES', 'EMBED_LINKS'])
       ) {
         const embed = new MessageEmbed()
-          .setTitle('Any Bot System Message')
-          .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+          .setTitle('Fluxed Bot System Message')
+          .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
           .setDescription(msg)
           .setTimestamp()
           .setColor(message.guild.me.displayHexColor);
