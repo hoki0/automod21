@@ -35,6 +35,7 @@ class Client extends Discord.Client {
      */
     this.types = {
       INFO: 'info',
+      ANTI: 'anti',
       FUN: 'fun',
       COLOR: 'color',
       POINTS: 'points',
@@ -45,7 +46,6 @@ class Client extends Discord.Client {
       MUSIC: 'music',
       BACKUP: 'backup',
       OWNER: 'owner',
-      NSFW: 'nsfw'
     };
 
     /** 
