@@ -57,8 +57,8 @@ module.exports = (client, message) => {
       !modChannelIds.includes(message.channel.id)
     ) {
       const embed = new MessageEmbed()
-        .setTitle('Hi, I\'m Any Bot. Need help?')
-        .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+        .setTitle('Hi, I\'m Fluxed Bot. Need help?')
+        .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
         .setDescription(`You can see everything I can do by using the \`${prefix}help\` command.`)
         .addField('Invite Me', oneLine`
           You can add me to your server by clicking 
@@ -66,7 +66,7 @@ module.exports = (client, message) => {
         `)
         .addField('Support', oneLine`
           If you have questions, suggestions, or found a bug, please join the 
-          [Any Bot Support Server](https://discord.gg/2FRpkNr)!
+          [Fluxed Bot Support Server](https://discord.gg/vcTwsbREQB)!
         `)
         .setColor(message.guild.me.displayHexColor);
       message.channel.send(embed);
@@ -76,4 +76,6 @@ module.exports = (client, message) => {
   // Update points with messagePoints value
   if (pointTracking) client.db.users.updatePoints.run({ points: messagePoints }, message.author.id, message.guild.id);
 };
+
+
 
