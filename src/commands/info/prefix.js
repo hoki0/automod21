@@ -7,15 +7,15 @@ module.exports = class PrefixCommand extends Command {
       name: 'prefix',
       aliases: ['pre'],
       usage: 'prefix',
-      description: 'Fetches Any Bot\'s current prefix.',
+      description: 'Fetches Fluxed Bot\'s current prefix.',
       type: client.types.INFO
     });
   }
   run(message) {
     const prefix = message.client.db.settings.selectPrefix.pluck().get(message.guild.id); // Get prefix
     const embed = new MessageEmbed()
-      .setTitle('Any Bot\'s Prefix')
-      .setThumbnail('https://cdn.glitch.com/5bfb504c-974f-4460-ab6e-066acc7e4fa6%2Fezgif.com-gif-to-apng.png?v=1595260265531')
+      .setTitle('Fluxed Bot\'s Prefix')
+      .setThumbnail('https://media.tenor.com/images/36d4a3cca93e9afe73bcb8e8bb70a69a/tenor.gif')
       .addField('Prefix', `\`${prefix}\``, true)
       .addField('Example', `\`${prefix}ping\``, true)
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
