@@ -10,7 +10,7 @@ module.exports = class StatsCommand extends Command {
       name: 'stats',
       aliases: ['statistics', 'metrics'],
       usage: 'stats',
-      description: 'Fetches Any Bot\'s statistics.',
+      description: 'Fetches Fluxed Bot\'s statistics.',
       type: client.types.INFO
     });
   }
@@ -35,7 +35,7 @@ module.exports = class StatsCommand extends Command {
       RAM Usage :: ${(usedMemMb/1024).toFixed(2)} GB 
     `;
     const embed = new MessageEmbed()
-      .setTitle('Any Bot\'s Statistics')
+      .setTitle('Fluxed Bot\'s Statistics')
       .addField('Commands', `\`${message.client.commands.size}\` commands`, true)
       .addField('Aliases', `\`${message.client.aliases.size}\` aliases`, true)
       .addField('Command Types', `\`${Object.keys(message.client.types).length}\` command types`, true)
@@ -43,8 +43,8 @@ module.exports = class StatsCommand extends Command {
       .addField('Server', `\`\`\`asciidoc\n${serverStats}\`\`\``)
       .addField(
         'Links', 
-        '**[Invite Me](https://discordapp.com/oauth2/authorize?client_id=733728002910715977&scope=bot&permissions=8) | ' +
-        '[Support Server](https://discord.gg/2FRpkNr) **'
+        '**[Invite Me](https://discord.com/api/oauth2/authorize?client_id=712313863256670218&permissions=8&scope=bot) | ' +
+        '[Support Server](https://discord.gg/vcTwsbREQBr) **'
       )
       .setFooter(message.member.displayName,  message.author.displayAvatarURL({ dynamic: true }))
       .setTimestamp()
