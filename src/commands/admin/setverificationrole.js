@@ -10,7 +10,7 @@ module.exports = class SetVerificationRoleCommand extends Command {
       aliases: ['setvr', 'svr'],
       usage: 'setverificationrole <role mention/ID>',
       description: oneLine`
-        Sets the role Any Bot will give members who are verified.
+        Sets the role Fluxed Bot will give members who are verified.
         Provide no role to clear the current \`verification role\`.
         A \`verification role\`, a \`verification channel\`, 
         and a \`verification message\` must be set to enable server verification.
