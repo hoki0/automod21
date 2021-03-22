@@ -8,7 +8,7 @@ module.exports = class ServersCommand extends Command {
       name: 'servers',
       aliases: ['servs'],
       usage: 'servers',
-      description: 'Displays a list of Any Bot\'s joined servers.',
+      description: 'Displays a list of Fluxed Bot\'s joined servers.',
       type: client.types.OWNER,
       ownerOnly: true
     });
